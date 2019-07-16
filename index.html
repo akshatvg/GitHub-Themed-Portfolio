@@ -59,9 +59,35 @@
         }
     </style>
 
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143300488-1');
+  </script>
+
+  <script>
+
+    $(document).keydown(function (e) {
+      if (e.which === 123) {
+
+        return false;
+
+      }
+
+    });
+
+    $(document).bind("contextmenu", function (e) {
+      e.preventDefault();
+
+    });
+
+  </script>
+
 </head>
 
-<body data-spy="scroll" data-target=".navbar" class="has-loading-screen">
+<body data-spy="scroll" data-target=".navbar" class="has-loading-screen"oncontextmenu=" return false" onkeydown="return false;" onmousedown="return false;">
     <div class="ts-page-wrapper" id="page-top">
         <!--Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black" style="box-shadow: 1px 1px 5px white;">
