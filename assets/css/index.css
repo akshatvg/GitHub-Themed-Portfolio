@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 /* Defaults */
 html,
 body {
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
 }
@@ -171,57 +171,28 @@ button:focus {
     color: red;
 }
 
-/* Sidenav */
-#sidenav-1 {
-    border-right: 15px solid #00ADB5;
-    color: black;
-}
-
 /* Navbar */
-.nav-wrapper {
-    background-color: #222831;
-    color: #EEEEEE;
-}
-
-/* Active Sidebar */
-#active {
-    color: #00ADB5;
-}
-
-#active-icon {
-    color: #00ADB5;
-}
-
-#active::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 0;
-    height: 0;
-    top: 15px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 20px solid #00ADB5;
-}
-
-/* Overlap Main Remove */
-header {
-    padding-left: 80px;
+#navbar {
+    -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background: #242A2E;
+    color: white;
 }
 
 /* Divider */
 .divider {
-    border: 1px solid #00ADB5;
+    border: 1px solid #242A2E;
     width: 100%;
 }
 
 .border-bottom-md {
-    border-bottom: 2px solid #00ADB5;
+    border-bottom: 2px solid #242A2E;
     width: 175px;
 }
 
 .border-bottom-sm {
-    border-bottom: 2px solid #00ADB5;
+    border-bottom: 2px solid #242A2E;
     width: 120px;
 }
 
@@ -230,9 +201,8 @@ header {
     font-weight: bolder;
 }
 
-/* Navbar Brand */
-.brand {
-    font-size: 30px;
+h5 {
+    font-size: 1.42rem;
 }
 
 /* Hide Scrollbar */
@@ -262,7 +232,53 @@ header {
     border-radius: 20px;
 }
 
-/* Modals */
-#modal {
-    transform: translateY(7%) scaleX(1) !important;
+/* Typography */
+.white-text-special {
+    color: white;
+}
+
+.white-text-special:hover {
+    color: rgba(245, 245, 245, 0.658);
+}
+
+.grey-text-special {
+    color: #6A747D;
+}
+
+.grey-text-special:hover {
+    color: rgba(106, 116, 125, 0.726);
+}
+
+.link-color {
+    color: #0366D6;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.link-color:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+#header {
+    background-color: #FAFBFC;
+    padding: 10px;
+}
+
+/* Social Icons */
+.social {
+    background-color: #fafbfc;
+    border-color: rgba(27, 31, 35, .15);
+    box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 1px 0 hsla(0, 0%, 100%, .25);
+    transition: background-color .2s cubic-bezier(.3, 0, .5, 1);
+    border: 1px solid #DDDEDE;
+    border-radius: 6px;
+    color: #6A747D;
+    padding: 3px;
+}
+
+.social:hover {
+    background-color: #F3F4F6;
 }
