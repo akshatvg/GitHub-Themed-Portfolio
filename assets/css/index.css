@@ -392,19 +392,24 @@ h5 {
 }
 
 /* Chips */
-.chip{
+.chip {
     background: #F1F8FE;
     color: #0366D6;
     font-weight: bold;
 }
 
 /* Sections */
-#overviewSection{
+#overviewSection,
+#educationSection,
+#workSection,
+#skillsSection,
+#projectsSection,
+#awards-certificationsSection {
     border: 1px solid #e1e4e8;
     border-radius: 6px;
     padding: 25px;
 }
 
-.overview-img{
+.overview-img {
     width: 300px;
 }

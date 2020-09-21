@@ -1,77 +1,108 @@
-const container = document.querySelector('.tabs')
-const primary = container.querySelector('.-primary')
-const primaryItems = container.querySelectorAll('.-primary > li:not(.-more)')
-container.classList.add('--jsfied')
+(function ($) {
+    "use strict";
 
-// Insert "more" button and duplicate the list
-primary.insertAdjacentHTML('beforeend', `
-  <li class="-more">
-    <button type="button" aria-haspopup="true" aria-expanded="false">
-      More <span>&darr;</span>
-    </button>
-    <ul class="-secondary">
-      ${primary.innerHTML}
-    </ul>
-  </li>
-`)
-const secondary = container.querySelector('.-secondary')
-const secondaryItems = secondary.querySelectorAll('li')
-const allItems = container.querySelectorAll('li')
-const moreLi = primary.querySelector('.-more')
-const moreBtn = moreLi.querySelector('button')
-moreBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    container.classList.toggle('--show-secondary')
-    moreBtn.setAttribute('aria-expanded', container.classList.contains('--show-secondary'))
-})
+    $("#educationSection").hide();
+    $("#workSection").hide();
+    $("#skillsSection").hide();
+    $("#projectsSection").hide();
+    $("#awards-certificationsSection").hide();
 
-// Adapt Tabs
-const doAdapt = () => {
-    // Reveal all items for the calculation
-    allItems.forEach((item) => {
-        item.classList.remove('--hidden')
-    })
+    // Overview clicked
+    $('#overview').click(function () {
+        $("#overviewSection").show();
+        $("#educationSection").hide();
+        $("#workSection").hide();
+        $("#skillsSection").hide();
+        $("#projectsSection").hide();
+        $("#awards-certificationsSection").hide();
+        $("#overview").addClass("active");
+        $("#education").removeClass("active");
+        $("#work").removeClass("active");
+        $("#skills").removeClass("active");
+        $("#projects").removeClass("active");
+        $("#awards-certifications").removeClass("active");
+    });
 
-    // Hide items that won't fit in primary 
-    let stopWidth = moreBtn.offsetWidth
-    let hiddenItems = []
-    const primaryWidth = primary.offsetWidth
-    primaryItems.forEach((item, i) => {
-        if (primaryWidth >= stopWidth + item.offsetWidth) {
-            stopWidth += item.offsetWidth
-        } else {
-            item.classList.add('--hidden')
-            hiddenItems.push(i)
-        }
-    })
+    // Education clicked
+    $('#education').click(function () {
+        $("#overviewSection").hide();
+        $("#educationSection").show();
+        $("#workSection").hide();
+        $("#skillsSection").hide();
+        $("#projectsSection").hide();
+        $("#awards-certificationsSection").hide();
+        $("#education").addClass("active");
+        $("#overview").removeClass("active");
+        $("#work").removeClass("active");
+        $("#skills").removeClass("active");
+        $("#projects").removeClass("active");
+        $("#awards-certifications").removeClass("active");
+    });
 
-    // Toggle the visibility of more button and items in secondary
-    if (!hiddenItems.length) {
-        moreLi.classList.add('--hidden')
-        container.classList.remove('--show-secondary')
-        moreBtn.setAttribute('aria-expanded', false)
-    }
-    else {
-        secondaryItems.forEach((item, i) => {
-            if (!hiddenItems.includes(i)) {
-                item.classList.add('--hidden')
-            }
-        })
-    }
-}
+    // Work clicked
+    $('#work').click(function () {
+        $("#workSection").show();
+        $("#educationSection").hide();
+        $("#overviewSection").hide();
+        $("#skillsSection").hide();
+        $("#projectsSection").hide();
+        $("#awards-certificationsSection").hide();
+        $("#work").addClass("active");
+        $("#education").removeClass("active");
+        $("#overview").removeClass("active");
+        $("#skills").removeClass("active");
+        $("#projects").removeClass("active");
+        $("#awards-certifications").removeClass("active");
+    });
 
-doAdapt() // Adapt immediately on load
-window.addEventListener('resize', doAdapt) // Adapt on window resize
+    // Skills clicked
+    $('#skills').click(function () {
+        $("#skillsSection").show();
+        $("#educationSection").hide();
+        $("#workSection").hide();
+        $("#overviewSection").hide();
+        $("#projectsSection").hide();
+        $("#awards-certificationsSection").hide();
+        $("#skills").addClass("active");
+        $("#education").removeClass("active");
+        $("#work").removeClass("active");
+        $("#overview").removeClass("active");
+        $("#projects").removeClass("active");
+        $("#awards-certifications").removeClass("active");
+    });
 
-// Hide secondary on the outside click
-document.addEventListener('click', (e) => {
-    let el = e.target
-    while (el) {
-        if (el === secondary || el === moreBtn) {
-            return;
-        }
-        el = el.parentNode
-    }
-    container.classList.remove('--show-secondary')
-    moreBtn.setAttribute('aria-expanded', false)
-})
+    // Projects clicked
+    $('#projects').click(function () {
+        $("#projectsSection").show();
+        $("#educationSection").hide();
+        $("#workSection").hide();
+        $("#skillsSection").hide();
+        $("#overviewSection").hide();
+        $("#awards-certificationsSection").hide();
+        $("#projects").addClass("active");
+        $("#education").removeClass("active");
+        $("#work").removeClass("active");
+        $("#skills").removeClass("active");
+        $("#overview").removeClass("active");
+        $("#awards-certifications").removeClass("active");
+    });
+
+    // Awards & Certifications clicked
+    $('#awards-certifications').click(function () {
+        $("#awards-certificationsSection").show();
+        $("#educationSection").hide();
+        $("#workSection").hide();
+        $("#skillsSection").hide();
+        $("#projectsSection").hide();
+        $("#overviewSection").hide();
+        $("#overview").removeClass("active");
+        $("#education").removeClass("active");
+        $("#work").removeClass("active");
+        $("#skills").removeClass("active");
+        $("#projects").removeClass("active");
+        $("#awards-certifications").addClass("active");
+    });
+
+})(jQuery);
+
+console.clear();
