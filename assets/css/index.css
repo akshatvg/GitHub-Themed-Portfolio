@@ -182,7 +182,7 @@ button:focus {
 
 /* Divider */
 .divider {
-    border: 1px solid #242A2E;
+    border: 0.2px solid #E1E4E8 !important;
     width: 100%;
 }
 
@@ -270,7 +270,6 @@ h5 {
 /* Social Icons */
 .social {
     background-color: #ffffff;
-    border-color: rgba(27, 31, 35, .15);
     box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 1px 0 hsla(0, 0%, 100%, .25);
     transition: background-color .2s cubic-bezier(.3, 0, .5, 1);
     border: 1px solid #DDDEDE;
@@ -281,6 +280,20 @@ h5 {
 
 .social:hover {
     background-color: #F3F4F6;
+}
+
+.green-social {
+    background-color: #2EA44E;
+    box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 1px 0 hsla(0, 0%, 100%, .25);
+    transition: background-color .2s cubic-bezier(.3, 0, .5, 1);
+    border: 1px solid #2B9148;
+    border-radius: 6px;
+    color: #6A747D;
+    padding: 3px;
+}
+
+.green-social:hover {
+    background-color: #2C974B;
 }
 
 /* Tabs */
@@ -399,12 +412,12 @@ h5 {
 }
 
 /* Sections */
-#overviewSection,
+#overviewMarkdownSection,
 #educationSection,
 #workSection,
 #skillsSection,
 #projectsSection,
-#awards-certificationsSection {
+#awards-certificationsMarkdownSection {
     border: 1px solid #e1e4e8;
     border-radius: 6px;
     padding: 25px;
@@ -412,4 +425,39 @@ h5 {
 
 .overview-img {
     width: 300px;
+}
+
+/* Commit Table */
+table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    border-right: 1px solid #e1e4e8;
+    border-left: 1px solid #e1e4e8;
+    border-radius: 6px;
+}
+
+.commitHead {
+    background: #F1F8FE;
+    border-radius: 6px;
+}
+
+th {
+    border-top: 1px solid #C9E1FF;
+    border-bottom: none;
+}
+
+thead {
+    border-right: 1px solid #C9E1FF;
+    border-left: 1px solid #C9E1FF;
+    border-top: 1px solid #C9E1FF;
+    border-bottom: none;
+}
+
+td {
+    border-top: 1px solid #e1e4e8;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.commitBody {
+    border: 1px solid #e1e4e8;
 }
