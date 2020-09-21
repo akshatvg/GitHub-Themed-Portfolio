@@ -284,9 +284,9 @@ h5 {
 
 .green-social {
     background-color: #2EA44E;
-    box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 1px 0 hsla(0, 0%, 100%, .25);
+    box-shadow: 0 1px 0 rgba(27, 31, 35, .1), inset 0 1px 0 hsla(0, 0%, 100%, .03);
     transition: background-color .2s cubic-bezier(.3, 0, .5, 1);
-    border: 1px solid #2B9148;
+    border: 1px solid rgba(27, 31, 35, .15);
     border-radius: 6px;
     color: #6A747D;
     padding: 3px;
@@ -413,10 +413,10 @@ h5 {
 
 /* Sections */
 #overviewMarkdownSection,
-#educationSection,
-#workSection,
-#skillsSection,
-#projectsSection,
+#educationMarkdownSection,
+#workMarkdownSection,
+#skillsMarkdownSection,
+#projectsMarkdownSection,
 #awards-certificationsMarkdownSection {
     border: 1px solid #e1e4e8;
     border-radius: 6px;

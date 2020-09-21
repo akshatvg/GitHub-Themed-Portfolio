@@ -103,6 +103,26 @@
         $("#awards-certifications").addClass("active");
     });
 
+    // Prevent Default
+    $("#overview").click(function (ev) {
+        ev.preventDefault();
+    });
+    $("#education").click(function (ev) {
+        ev.preventDefault();
+    });
+    $("#work").click(function (ev) {
+        ev.preventDefault();
+    });
+    $("#skills").click(function (ev) {
+        ev.preventDefault();
+    });
+    $("#projects").click(function (ev) {
+        ev.preventDefault();
+    });
+    $("#awards-certifications").click(function (ev) {
+        ev.preventDefault();
+    });
+
 })(jQuery);
 
 console.clear();
