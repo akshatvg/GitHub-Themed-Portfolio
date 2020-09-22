@@ -17,9 +17,9 @@ This repository is made by Akshat Gupta to develop, maintain and deploy his port
 
 ## Requirements
 
-[![GitHub top language](https://img.shields.io/github/languages/top/akshatvg/akshatvg.github.io?logo=javascript&style=social)](https://github.com/akshatvg/)
+[![GitHub top language](https://img.shields.io/github/languages/top/akshatvg/akshatvg.github.io?logo=css&style=social)](https://github.com/akshatvg/)
 
-The source code of this project is written in **`HTML/CSS/JS`**. So, you do not require anything extra to run this project.
+The source code of this project is written in **`HTML/CSS/JS`** & **`MaterializeCSS`**. So, you only need to import the MaterializeCSS CDNs.
 
 ## Instructions
 
