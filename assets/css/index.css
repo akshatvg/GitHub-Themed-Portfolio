@@ -472,3 +472,19 @@ td {
     border-radius: 6px;
     padding: 25px;
 }
+
+/* Sticky Footer */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    background: white;
+    color: #576169;
+}
