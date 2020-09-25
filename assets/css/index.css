@@ -435,35 +435,49 @@ h5 {
 table {
     border-collapse: separate !important;
     border-spacing: 0;
-    border-right: 1px solid #e1e4e8;
-    border-left: 1px solid #e1e4e8;
     border-radius: 6px;
 }
 
-.commitHead {
-    background: #F1F8FE;
-    border-radius: 6px;
-}
-
+td,
 th {
-    border-top: 1px solid #C9E1FF;
-    border-bottom: none;
-}
-
-thead {
-    border-right: 1px solid #C9E1FF;
-    border-left: 1px solid #C9E1FF;
-    border-top: 1px solid #C9E1FF;
-    border-bottom: none;
-}
-
-td {
-    border-top: 1px solid #e1e4e8;
+    border: 1px solid #e1e4e8;
     border-bottom: 1px solid #e1e4e8;
 }
 
-.commitBody {
-    border: 1px solid #e1e4e8;
+th {
+    background: #F1F8FE;
+}
+
+@media only screen and (min-width: 780px) {
+    .commitHead {
+        border-radius: 6px;
+    }
+
+    th {
+        border-top: 1px solid #C9E1FF;
+        border-bottom: none;
+    }
+
+    thead {
+        border-right: 1px solid #C9E1FF;
+        border-left: 1px solid #C9E1FF;
+        border-top: 1px solid #C9E1FF;
+        border-bottom: none;
+    }
+
+    td {
+        border-top: 1px solid #e1e4e8;
+        border-bottom: 1px solid #e1e4e8;
+    }
+
+    .commitBody {
+        border: 1px solid #e1e4e8;
+    }
+
+    table {
+        border-right: 1px solid #e1e4e8;
+        border-left: 1px solid #e1e4e8;
+    }
 }
 
 /* Project Box */
