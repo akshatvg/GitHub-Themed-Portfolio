@@ -201,10 +201,6 @@ button:focus {
     font-weight: bolder;
 }
 
-h5 {
-    font-size: 1.42rem;
-}
-
 /* Hide Scrollbar */
 ::-webkit-scrollbar {
     display: none;
@@ -421,7 +417,8 @@ h5 {
 #workMarkdownSection,
 #skillsMarkdownSection,
 #projectsMarkdownSection,
-#awards-certificationsMarkdownSection {
+#awards-certificationsMarkdownSection,
+#errorMarkdownSection {
     border: 1px solid #e1e4e8;
     border-radius: 6px;
     padding: 25px;
@@ -501,4 +498,15 @@ main {
 footer {
     background: white;
     color: #576169;
+}
+
+/* Headings */
+h2 {
+    font-size: 1.15rem;
+    margin: .7666666667rem 0 .46rem 0;
+}
+
+h1 {
+    font-size: 1.42rem;
+    margin: 1.0933333333rem 0 .656rem 0;
 }
